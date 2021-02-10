@@ -1,0 +1,36 @@
+{\justifying
+	\chapter{Ejemplo de SageMath y LaTeX}
+	Para el siguiente ejemplo necesitaremos los siguientes teoremas
+	\begin{theorem}{}{moduleChange}
+    Si ${ac}\equiv{bc}\mod{m}$ y $d=({c},{m})$ entonces
+    $${a}\equiv{b}\mod{\frac{m}{d}}$$
+  \end{theorem}
+	\begin{theorem}{}{linearCongruence}
+    La congruencia lineal ${ax}\equiv{b}\mod{m}$ tiene solución si y solo si $d|b$ donde $d=(a,m)$, además tiene $d$ soluciones incongruentes.
+  \end{theorem}
+  \begin{sagesilent}
+    a = 18
+    b = 6
+    m = 26
+  \end{sagesilent}
+  \begin{example}{}{}
+    Resolver la siguiente congruencia lineal ${\sage{a}x}\equiv{\sage{b}}\mod{\sage{m}}$.
+  \end{example}
+	\begin{solution}
+	  \subimport{../programming/tex/examples/}{linearCongruenceEquation.tex}
+	\end{solution}
+	\begin{sagesilent}
+    a = 54
+    b = 168
+    m = 30
+  \end{sagesilent}
+  \begin{example}{}{}
+    Resolver la siguiente congruencia lineal ${\sage{a}x}\equiv{\sage{b}}\mod{\sage{m}}$.
+  \end{example}
+	\begin{solution}
+	  \subimport{../programming/tex/examples/}{linearCongruenceEquation.tex}
+	\end{solution}
+	
+	
+	
+}\cleanalldata

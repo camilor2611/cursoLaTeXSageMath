@@ -1,0 +1,3 @@
+[submodule "fancyBook"]
+	path = fancyBook
+	url = https://github.com/camilor2611/fancyBook

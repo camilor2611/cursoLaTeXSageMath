@@ -1,0 +1,21 @@
+%----- it's needs a,b,m-------------
+\begin{sagesilent}
+linear_congruence = LinearCongruenceEquation(a, b, m)
+step_vector = linear_congruence.intermediate_steps()
+a1 = step_vector[0]
+b1 = step_vector[1]
+m1 = step_vector[2]
+inverse_a = step_vector[3]
+result = step_vector[4]
+\end{sagesilent}
+%------------------------------------
+Primero hallamos $d=({\sage{a}},{\sage{m}})=\sage{linear_congruence.d}$
+\begin{align*}
+	\sage{a}x &\equiv \sage{b} \mod{\sage{m}}\\
+	\sage{a1}x &\equiv \sage{b1} \mod{\sage{m1}}\quad(\text{Por \ref{th:moduleChange}})\\
+	(\sage{inverse_a}\cdot\sage{a1})x &\equiv \sage{inverse_a}(\sage{b1}) \mod{\sage{m1}}\quad(\text{Operando por el inverso de }\sage{a1})\\
+	x &\equiv \sage{result} \mod{\sage{m1}}.
+\end{align*}
+Así que la soluciones incongruentes son \sagestr{linear_congruence.show_solution()}.
+
+%\textbf{Falta nombrar pasos}
